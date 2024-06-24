@@ -1,0 +1,26 @@
+name: cdtrans
+channels:
+  - pytorch
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - python=3.8
+  - pip
+  - tqdm=4.61.2
+  - numpy=1.20.2
+  - matplotlib=3.4.2
+  - scipy=1.6.3
+  - pillow=8.4.0
+  - ipykernel
+  - pandas
+  # - cudatoolkit==10.1
+  - pip:  
+    - torch==1.8.1+cu111
+    - torchvision==0.9.1+cu111 
+    - scikit_learn==1.0
+    - h5py==3.2.1
+    - yacs==0.1.8
+    - opencv_python==4.5.2.54
+    - timm==0.4.9
+    
