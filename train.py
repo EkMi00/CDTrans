@@ -15,6 +15,9 @@ import argparse
 
 from config import cfg
 from timm.data import Mixup
+
+torch.cuda.empty_cache()
+
 def set_seed(seed):
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)

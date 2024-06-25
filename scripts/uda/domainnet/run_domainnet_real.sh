@@ -13,7 +13,7 @@ else
     model_type='uda_vit_small_patch16_224_TransReID'
     gpus="('0')"
 fi
-for target_dataset in 'infograph' 'quickdraw' 'painting' 'sketch' 'clipart' 
+for target_dataset in 'infograph' 'quickdraw' 'sketch'
 do
     python train.py --config_file configs/uda.yml MODEL.DEVICE_ID $gpus\
     OUTPUT_DIR '../logs/uda/'$model'/domainnet/real2'$target_dataset  \
