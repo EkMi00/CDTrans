@@ -474,6 +474,12 @@ bash scripts/uda/office31/run_office_amazon.sh deit_small
 ```bash
 # For example VisDA-2017
 python test.py --config_file 'configs/uda.yml' MODEL.DEVICE_ID "('0')" TEST.WEIGHT "('../logs/uda/vit_base/visda/transformer_best_model.pth')" DATASETS.NAMES 'VisDA' DATASETS.NAMES2 'VisDA' OUTPUT_DIR '../logs/uda/vit_base/visda/' DATASETS.ROOT_TRAIN_DIR './data/visda/train/train_image_list.txt' DATASETS.ROOT_TRAIN_DIR2 './data/visda/train/train_image_list.txt' DATASETS.ROOT_TEST_DIR './data/visda/validation/valid_image_list.txt'  
+
+# Office-31: Amazon -> Webcam
+python test.py --config_file 'configs/uda.yml' MODEL.DEVICE_ID "('0')" TEST.WEIGHT "('../logs/uda/deit_base/office/amazon2webcam/transformer_best_model.pth')" DATASETS.NAMES 'Office' DATASETS.NAMES2 'Office' OUTPUT_DIR '../logs/uda/office/amazon2webcam/' DATASETS.ROOT_TRAIN_DIR './data/office31/amazon_list.txt' DATASETS.ROOT_TRAIN_DIR2 './data/office31/amazon_list.txt' DATASETS.ROOT_TEST_DIR './data/office31/webcam_list.txt'  
+
+# Office-31: Amazon -> dslr
+python test.py --config_file 'configs/uda.yml' MODEL.DEVICE_ID "('0')" TEST.WEIGHT "('../logs/uda/deit_base/office/amazon2dslr/transformer_best_model.pth')" DATASETS.NAMES 'Office' DATASETS.NAMES2 'Office' OUTPUT_DIR '../logs/uda/office/amazon2dslr/' DATASETS.ROOT_TRAIN_DIR './data/office31/amazon_list.txt' DATASETS.ROOT_TRAIN_DIR2 './data/office31/amazon_list.txt' DATASETS.ROOT_TEST_DIR './data/office31/dslr_list.txt'  
 ```
 
 ## Acknowledgement
