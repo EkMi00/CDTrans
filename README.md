@@ -455,8 +455,12 @@ bash scripts/pretrain/officehome/run_officehome_Ar.sh deit_base
 bash scripts/uda/officehome/run_officehome_Ar.sh deit_base
 
 # VisDA-2017    Source: train    ->  Target: validation
-bash scripts/pretrain/visda/run_visda.sh deit_base
-bash scripts/uda/visda/run_visda.sh deit_base
+bash scripts/pretrain/visda/run_visda_trn-val.sh deit_base
+bash scripts/uda/visda/run_visda_trn-val.sh deit_base
+
+# VisDA-2017    Source: validation    ->  Target: train
+bash scripts/pretrain/visda/run_visda_val-trn.sh deit_base
+bash scripts/uda/visda/run_visda_val-trn.sh deit_base
 
 # DomainNet     Source: Clipart  ->  Target: painting, quickdraw, real, sketch, infograph
 bash scripts/pretrain/domainnet/run_domainnet_clp.sh deit_base
