@@ -1,0 +1,1 @@
+bash scripts/pretrain/domainnet/run_domainnet_qdr.sh deit_base

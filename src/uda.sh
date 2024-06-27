@@ -1,0 +1,1 @@
+bash scripts/uda/domainnet/run_domainnet_qdr.sh deit_base
