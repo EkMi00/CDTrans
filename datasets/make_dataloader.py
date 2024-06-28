@@ -13,6 +13,7 @@ from .office_home import OfficeHome
 from .visda import VisDA
 from .domainnet import DomainNet
 from .office import Office
+from .Optical_ISAR import Optical_ISAR
 
 
 __factory = {
@@ -21,7 +22,7 @@ __factory = {
     'VisDA': VisDA,
     'DomainNet': DomainNet,
     'Office': Office,
-
+    'Optical_ISAR': Optical_ISAR
 }
 
 def train_collate_fn(batch):

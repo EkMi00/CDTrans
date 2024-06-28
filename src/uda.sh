@@ -1,1 +1,1 @@
-bash scripts/uda/domainnet/run_domainnet_qdr.sh deit_base
+bash scripts/uda/optical-isar/run_optical_isar.sh deit_small

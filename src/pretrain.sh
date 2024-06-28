@@ -1,1 +1,1 @@
-bash scripts/pretrain/domainnet/run_domainnet_qdr.sh deit_base
+bash scripts/pretrain/optical-isar/run_optical_isar.sh deit_small
