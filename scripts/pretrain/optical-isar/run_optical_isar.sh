@@ -13,10 +13,12 @@ else
     model_type='vit_small_patch16_224_TransReID'
     pretrain_model='deit_small_distilled_patch16_224-649709d9.pth'
 fi
-python train.py --config_file configs/pretrain.yml MODEL.DEVICE_ID "('0')" DATASETS.NAMES 'Optical_ISAR' \
+python train.py --config_file configs/pretrain.yml \
+MODEL.DEVICE_ID "('0')" \
+DATASETS.NAMES 'Optical_ISAR' \
 OUTPUT_DIR 'logs/pretrain/'$model'/optical-isar' \
 DATASETS.ROOT_TRAIN_DIR './data/optical-isar/optical.txt' \
 DATASETS.ROOT_TEST_DIR './data/optical-isar/optical.txt'  \
-SOLVER.LOG_PERIOD 10 \
+SOLVER.LOG_PERIOD 100 \
 MODEL.Transformer_TYPE $model_type \
-MODEL.PRETRAIN_PATH './data/pretrainModel/'$pretrain_model \
+MODEL.PRETRAIN_PATH './data/pretrainModel/'$pretrain_model

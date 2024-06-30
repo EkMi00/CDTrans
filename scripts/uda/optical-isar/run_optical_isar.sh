@@ -15,7 +15,8 @@ else
 fi
 for target_dataset in 'isar'
 do
-    python train.py --config_file configs/uda.yml MODEL.DEVICE_ID $gpus \
+    python train.py --config_file configs/uda.yml \
+    MODEL.DEVICE_ID $gpus \
     OUTPUT_DIR 'logs/uda/'$model'/optical-isar' \
     MODEL.PRETRAIN_PATH 'logs/pretrain/'$model'/optical-isar/transformer_10.pth' \
     DATASETS.ROOT_TRAIN_DIR './data/optical-isar/optical.txt' \
@@ -23,6 +24,5 @@ do
     DATASETS.ROOT_TEST_DIR './data/optical-isar/'$target_dataset'.txt' \
     DATASETS.NAMES "Optical_ISAR" DATASETS.NAMES2 "Optical_ISAR" \
     MODEL.Transformer_TYPE $model_type \
-    SOLVER.LOG_PERIOD 10 \
-
+    SOLVER.LOG_PERIOD 100
 done

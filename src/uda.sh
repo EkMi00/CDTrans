@@ -1,1 +1,1 @@
-bash scripts/uda/optical-isar/run_optical_isar.sh deit_small
+bash scripts/uda/optical-isar/run_optical_isar.sh deit_base

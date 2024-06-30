@@ -36,7 +36,7 @@ class Office(BaseImageDataset):
 
         
         if verbose:
-            print("=> VidDA-2017 loaded")
+            print("=> Office-31 loaded")
             self.print_dataset_statistics(train, valid)
             
         self.train = train
