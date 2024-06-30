@@ -1,0 +1,40 @@
+model=$1
+if [ ! -n "$1" ]
+then 
+    echo 'pelease input the model para: {deit_base, deit_small}'
+    exit 8
+fi
+if [ $model == 'deit_base' ]
+then
+    model_type='uda_vit_base_patch16_224_TransReID'
+    gpus="('0')"
+else
+    model='deit_small'
+    model_type='uda_vit_small_patch16_224_TransReID'
+    gpus="('0')"
+fi
+for target_dataset in 'isar'
+do
+    python test.py --config_file 'configs/uda.yml' \
+    MODEL.DEVICE_ID $gpus \
+    TEST.WEIGHT 'logs/uda/'$model'/optical-isar/transformer_best_model.pth' \
+    MODEL.Transformer_TYPE $model_type \
+    DATASETS.NAMES 'Optical_ISAR' \
+    DATASETS.NAMES2 'Optical_ISAR' \
+    OUTPUT_DIR 'logs/uda/'$model'/optical-isar/' \
+    DATASETS.ROOT_TRAIN_DIR './data/optical-isar/optical.txt' \
+    DATASETS.ROOT_TRAIN_DIR2 './data/optical-isar/optical.txt' \
+    DATASETS.ROOT_TEST_DIR './data/optical-isar/'$target_dataset'.txt'
+
+done
+
+# python train.py --config_file configs/uda.yml \
+# MODEL.DEVICE_ID $gpus \
+# OUTPUT_DIR 'logs/uda/'$model'/optical-isar' \
+# MODEL.PRETRAIN_PATH 'logs/pretrain/'$model'/optical-isar/transformer_10.pth' \
+# DATASETS.ROOT_TRAIN_DIR './data/optical-isar/optical.txt' \
+# DATASETS.ROOT_TRAIN_DIR2 './data/optical-isar/'$target_dataset'.txt' \
+# DATASETS.ROOT_TEST_DIR './data/optical-isar/'$target_dataset'.txt' \
+# DATASETS.NAMES "Optical_ISAR" DATASETS.NAMES2 "Optical_ISAR" \
+# MODEL.Transformer_TYPE $model_type \
+# SOLVER.LOG_PERIOD 100
