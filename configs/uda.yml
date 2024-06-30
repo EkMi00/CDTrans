@@ -1,7 +1,8 @@
 MODEL:
   PRETRAIN_CHOICE: 'pretrain'
   # PRETRAIN_PATH: './.torch/models/jx_vit_base_p16_224-80ecf9dd.pth'
-  PRETRAIN_PATH: logs/pretrain/deit_base/optical-isar/transformer_10.pth
+  # PRETRAIN_PATH: logs/pretrain/deit_base/optical-isar/transformer_best_model.pth
+  PRETRAIN_PATH: logs/pretrain/deit_small/optical-isar/transformer_best_model.pth
   METRIC_LOSS_TYPE: 'triplet'
   IF_LABELSMOOTH: 'off'
   IF_WITH_CENTER: 'no'
@@ -59,7 +60,7 @@ SOLVER:
 
 TEST:
   EVAL: True
-  IMS_PER_BATCH: 256
+  IMS_PER_BATCH: 64
   RE_RANKING: False
   RE_RANKING_TRACK: False
 

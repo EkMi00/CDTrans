@@ -52,14 +52,6 @@ class Optical_ISAR(BaseImageDataset):
         """Check if all files are available before going deeper"""
         if not osp.exists(self.dataset_dir):
             raise RuntimeError("'{}' is not available".format(self.dataset_dir))
-        if not osp.exists(self.art_dir):
-            raise RuntimeError("'{}' is not available".format(self.art_dir))
-        if not osp.exists(self.clipart_dir):
-            raise RuntimeError("'{}' is not available".format(self.clipart_dir))
-        if not osp.exists(self.product_dir):
-            raise RuntimeError("'{}' is not available".format(self.product_dir))
-        if not osp.exists(self.realworld_dir):
-            raise RuntimeError("'{}' is not available".format(self.realworld_dir))
 
     def print_dataset_statistics(self, train, test):
         num_train_pids, num_train_imgs, num_train_cams, num_train_views = self.get_imagedata_info(train)
