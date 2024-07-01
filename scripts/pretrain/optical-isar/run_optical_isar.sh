@@ -22,3 +22,4 @@ DATASETS.ROOT_TEST_DIR './data/optical-isar/optical.txt'  \
 SOLVER.LOG_PERIOD 100 \
 MODEL.Transformer_TYPE $model_type \
 MODEL.PRETRAIN_PATH './data/pretrainModel/'$pretrain_model
+# MODEL.PRETRAIN_PATH 'logs/pretrain/'$model'/optical-isar/transformer_best_model.pth' \

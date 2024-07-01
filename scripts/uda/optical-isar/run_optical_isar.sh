@@ -18,7 +18,7 @@ do
     python train.py --config_file configs/uda.yml \
     MODEL.DEVICE_ID $gpus \
     OUTPUT_DIR 'logs/uda/'$model'/optical-isar' \
-    MODEL.PRETRAIN_PATH 'logs/pretrain/'$model'/optical-isar/transformer_10.pth' \
+    MODEL.PRETRAIN_PATH 'logs/pretrain/'$model'/optical-isar/transformer_best_model.pth' \
     DATASETS.ROOT_TRAIN_DIR './data/optical-isar/optical.txt' \
     DATASETS.ROOT_TRAIN_DIR2 './data/optical-isar/'$target_dataset'.txt' \
     DATASETS.ROOT_TEST_DIR './data/optical-isar/'$target_dataset'.txt' \

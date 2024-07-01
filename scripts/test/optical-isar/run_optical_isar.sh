@@ -24,7 +24,8 @@ do
     OUTPUT_DIR 'logs/uda/'$model'/optical-isar/' \
     DATASETS.ROOT_TRAIN_DIR './data/optical-isar/optical.txt' \
     DATASETS.ROOT_TRAIN_DIR2 './data/optical-isar/optical.txt' \
-    DATASETS.ROOT_TEST_DIR './data/optical-isar/'$target_dataset'.txt'
+    DATASETS.ROOT_TEST_DIR './data/optical-isar/'$target_dataset'.txt' \
+    MODEL.PRETRAIN_PATH 'logs/pretrain/deit_base/optical-isar/transformer_best_model.pth'
 
 done
 
