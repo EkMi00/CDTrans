@@ -1,6 +1,6 @@
-2024-07-01 02:59:07,979 reid_baseline INFO: Namespace(config_file='configs/uda.yml', opts=['MODEL.DEVICE_ID', "('0')", 'TEST.WEIGHT', 'logs/uda/deit_base/optical-isar/transformer_best_model.pth', 'MODEL.Transformer_TYPE', 'uda_vit_base_patch16_224_TransReID', 'DATASETS.NAMES', 'Optical_ISAR', 'DATASETS.NAMES2', 'Optical_ISAR', 'OUTPUT_DIR', 'logs/uda/deit_base/optical-isar/', 'DATASETS.ROOT_TRAIN_DIR', './data/optical-isar/optical.txt', 'DATASETS.ROOT_TRAIN_DIR2', './data/optical-isar/optical.txt', 'DATASETS.ROOT_TEST_DIR', './data/optical-isar/isar.txt', 'MODEL.PRETRAIN_PATH', 'logs/pretrain/deit_base/optical-isar/transformer_best_model.pth'])
-2024-07-01 02:59:07,980 reid_baseline INFO: Loaded configuration file configs/uda.yml
-2024-07-01 02:59:07,980 reid_baseline INFO: 
+2024-07-01 05:27:38,562 reid_baseline INFO: Namespace(config_file='configs/uda.yml', opts=['MODEL.DEVICE_ID', "('0')", 'TEST.WEIGHT', 'logs/uda/deit_base/optical-isar/transformer_best_model.pth', 'MODEL.Transformer_TYPE', 'uda_vit_base_patch16_224_TransReID', 'DATASETS.NAMES', 'Optical_ISAR', 'DATASETS.NAMES2', 'Optical_ISAR', 'OUTPUT_DIR', 'logs/uda/deit_base/optical-isar/', 'DATASETS.ROOT_TRAIN_DIR', './data/optical-isar/optical.txt', 'DATASETS.ROOT_TRAIN_DIR2', './data/optical-isar/optical.txt', 'DATASETS.ROOT_TEST_DIR', './data/optical-isar/isar.txt', 'MODEL.PRETRAIN_PATH', 'logs/pretrain/deit_base/optical-isar/transformer_best_model.pth'])
+2024-07-01 05:27:38,563 reid_baseline INFO: Loaded configuration file configs/uda.yml
+2024-07-01 05:27:38,563 reid_baseline INFO: 
 MODEL:
   PRETRAIN_CHOICE: 'pretrain'
   # PRETRAIN_PATH: './.torch/models/jx_vit_base_p16_224-80ecf9dd.pth'
@@ -74,7 +74,7 @@ OUTPUT_DIR: 'logs/uda/deit_base/optical-isar'
 
 
 
-2024-07-01 02:59:07,981 reid_baseline INFO: Running with config:
+2024-07-01 05:27:38,563 reid_baseline INFO: Running with config:
 DATALOADER:
   NUM_INSTANCE: 4
   NUM_WORKERS: 4
@@ -177,7 +177,7 @@ TEST:
   RE_RANKING: False
   RE_RANKING_TRACK: False
   WEIGHT: logs/uda/deit_base/optical-isar/transformer_best_model.pth
-2024-07-01 03:00:05,879 reid_baseline.test INFO: Enter inferencing
-2024-07-01 03:00:23,947 reid_baseline.test INFO: normal accuracy 0.8260405549626467 0.014376319013535976 
-2024-07-01 03:00:23,948 reid_baseline.test INFO: Classify Domain Adapatation Validation Results - In the source trained model
-2024-07-01 03:00:23,948 reid_baseline.test INFO: Accuracy: 82.6%
+2024-07-01 05:28:07,129 reid_baseline.test INFO: Enter inferencing
+2024-07-01 05:28:17,342 reid_baseline.test INFO: normal accuracy 0.891675560298826 0.00853260513395071 
+2024-07-01 05:28:17,342 reid_baseline.test INFO: Classify Domain Adapatation Validation Results - In the source trained model
+2024-07-01 05:28:17,343 reid_baseline.test INFO: Accuracy: 89.2%
